@@ -7,7 +7,7 @@ const ingredients = [
     'Приправы',
   ];
   
-  const ingredientsRef = document.querySelector('#ingredients');
+ /* const ingredientsRef = document.querySelector('#ingredients');
   
   const potato = document.createElement('li');
   potato.textContent = ingredients[0];
@@ -34,4 +34,9 @@ const ingredients = [
     tomato,
     greens,
     condiments,
-  );
+  );*/
+  ingredientsEl.append(...ingredients.map(el => {
+    const liRef = document.createElement("li");
+    liRef.textContent = el;
+    return liRef;
+  }),

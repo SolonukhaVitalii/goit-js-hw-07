@@ -1,14 +1,13 @@
-const inputRef = document.querySelector('#validation-input');
+const validationInput = document.querySelector("#validation-input");
 
-const onInputFocusChange = () => {
-  if (inputRef.value.length >= inputRef.dataset.length) {
-    inputRef.classList.add('valid');
-    inputRef.classList.remove('invalid');
-  }
-  if (inputRef.value.length < inputRef.dataset.length) {
-    inputRef.classList.add('invalid');
-    inputRef.classList.remove('valid');
+function inputFocusChange() {
+  if (validationInput.value.length < validationInput.dataset.length) {
+    validationInput.classList.remove("valid");
+    validationInput.classList.add("invalid");
+  } else {
+    validationInput.classList.remove("invalid");
+    validationInput.classList.add("valid");
   }
 };
 
-inputRef.addEventListener('change', onInputFocusChange);
+validationInput.addEventListener("blur", inputFocusChange);
