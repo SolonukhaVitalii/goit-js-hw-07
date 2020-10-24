@@ -9,3 +9,20 @@
   .validation-input.invalid {
     border-color: #f44336;
   }
+
+  img {
+    width: 400px;
+    height: 250px;
+  }
+
+  .gallery {
+    display: flex;
+  }
+
+  .gallery li {
+    margin-left: 15px;
+    margin-top: 15px;
+    list-style-type: none;
+  }
+    
+  
