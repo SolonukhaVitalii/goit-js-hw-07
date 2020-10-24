@@ -19,6 +19,8 @@ const images = [
 
 const galleryRef = document.querySelector('#gallery');
 
-images.map(el => galleryRef.insertAdjacentHTML("beforeend",
-  `<li><img src="${el.url}" alt="${el.alt}"></li>`)).join('');
-
+let arrMarkup = images.map((el) => {
+	return `<li><img src="${el.url}" alt="${el.alt}"></li>`;
+});
+console.log(arrMarkup);
+galleryRef.insertAdjacentHTML('beforeend', arrMarkup.join(" "));
